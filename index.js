@@ -11,9 +11,8 @@ dash.on("detected", function (){
 	    axios.get("http://localhost:5005/Rodrigo/pause").then((sonos) => {
 	      console.log('Success!')
 				axios.post(process.env.slack, {"text": "diiiiiiice", "channel": "studio"
-				 }).then(() => console.log('Successfully sent slack message')).catch(error => console.error(error))
+			}).then(() => console.log('SENT SLACK MESSAGE')).catch(error => console.error(error))
 	    }).catch(error => console.error(error))
 	  }, 5000);
 	}).catch(error => console.error(error))
-
 });
