@@ -5,7 +5,7 @@ const dash = dash_button(process.env.button, null, null, 'all');
 
 dash.on("detected", function (){
 	console.log("yesssss");
-	axios.get("http://localhost:5005/Rodrigo/volume/40").then(() => 	{
+	axios.get("http://localhost:5005/Rodrigo/volume/50").then(() => 	{
 		console.log('pause');
 	}).catch(error => console.error(error))
 	axios.get("http://localhost:5005/Rodrigo/shuffle/on").then(() => 	{
