@@ -5,6 +5,9 @@ const dash = dash_button(process.env.button, null, null, 'all');
 
 dash.on("detected", function (){
 	console.log("yesssss");
+	axios.get("http://localhost:5005/Rodrigo/volume/40").then(() => 	{
+		console.log('pause');
+	}).catch(error => console.error(error))
 	axios.get("http://localhost:5005/Rodrigo/shuffle/on").then(() => 	{
 		console.log('pause');
 	}).catch(error => console.error(error))
@@ -16,6 +19,6 @@ dash.on("detected", function (){
 	      axios.post(process.env.slack, {"text": "diiiiiiice", "channel": "studio"
 	    }).then(() => console.log('SENT SLACK MESSAGE')).catch(error => console.error(error))
 	    }).catch(error => console.error(error))
-	  }, 5000);
+	  }, 4000);
 	}).catch(error => console.error(error))
 });
