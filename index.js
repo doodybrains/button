@@ -16,7 +16,7 @@ dash.on("detected", function (){
 	  setTimeout(() => {
 	    axios.get("http://localhost:5005/Rodrigo/playlist/%E2%9A%80%20%E2%9A%81%20%E2%9A%82%20D%20I%20C%20E%20%E2%9A%83%20%E2%9A%84%20%E2%9A%85").then((sonos) => {
 	      console.log('diiiiiidd it.')
-	      axios.post(process.env.slack, {"text": "diiiiiiice", "channel": "studio"
+	      axios.post(process.env.slack, {"text": "@here diiiiiiice", "channel": "studio"
 	    }).then(() => console.log('SENT SLACK MESSAGE')).catch(error => console.error(error))
 	    }).catch(error => console.error(error))
 	  }, 4000);
