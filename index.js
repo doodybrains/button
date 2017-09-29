@@ -9,6 +9,7 @@ dash.on("detected", function (){
 	axios.get(process.env.volume).then(() => 	{
 		console.log('volume went up yesssss');
 	}).catch(error => console.error(error))
+
 	axios.get(process.env.shuffle).then(() => 	{
 		console.log('songs are shuffffledd');
 	}).catch(error => console.error(error))
@@ -16,7 +17,8 @@ dash.on("detected", function (){
 	axios.get(process.env.noises).then((sonos) => {
 	  setTimeout(() => {
 	    axios.get(process.env.playlist).then((sonos) => {
-	      console.log('playing playlist')
+	      console.log('playing playlist');
+
 	      axios.post(process.env.slack, {"text": process.env.message, "channel": "studio"
 	    }).then(() => console.log('SENT SLACK MESSAGE')).catch(error => console.error(error))
 	    }).catch(error => console.error(error))
