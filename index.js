@@ -3,6 +3,8 @@ const dash_button = require('node-dash-button');
 const axios = require('axios');
 const dash = dash_button(process.env.button, null, null, 'all');
 
+console.log("server up");
+
 dash.on("detected", function (){
 	console.log("button detectteeeddd yah000");
 
